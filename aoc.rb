@@ -9,14 +9,14 @@ end
 
 puzzle_number = ARGV[0].strip.to_sym
 unless Puzzles.respond_to?(puzzle_number)
-  pp "Puzzle '#{puzzle_number}' not found"
+  puts "Puzzle '#{puzzle_number}' not found"
   exit 1
 end
 
 
 mode = ARGV[1]&.strip&.to_sym || :real
 unless MODES.include?(mode)
-  pp "Incorrect mode '#{mode}'"
+  puts "Incorrect mode '#{mode}'"
   exit 1
 end
 
